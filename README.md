@@ -1,12 +1,12 @@
 Dependencies:
-    - # for use from cli
-    - npm install electron-packager -g
+- # for use from cli
+- npm install electron-packager -g
 
 Module page/instructions:
-    - https://www.npmjs.com/package/electron-packager
-    - https://www.christianengvall.se/electron-packager-tutorial/
-    - https://fearby.com/article/create-first-hello-world-electron-app-osx/
-    - https://superuser.com/questions/1255991/zip-with-symlink-in-it
+- https://www.npmjs.com/package/electron-packager
+- https://www.christianengvall.se/electron-packager-tutorial/
+- https://fearby.com/article/create-first-hello-world-electron-app-osx/
+- https://superuser.com/questions/1255991/zip-with-symlink-in-it
 
 Notes for IOS:
 - The build command must be runned using a bash console with admin priveleges if building from windows
