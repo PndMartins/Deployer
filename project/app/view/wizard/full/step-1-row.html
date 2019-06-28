@@ -1,0 +1,16 @@
+<template class="template">
+    {{#card}}
+    <tr class="grey-text text-lighten-4 dark-theme">
+        <td>{{cardName}}</td>
+        <td>{{commit_hash}}</td>
+        <td>{{last_commit_date}} <span class="brown-text text-lighten-2">{{last_commit_date_descriptive}}</span></td>
+        <td>{{commit_author}}</td>
+        <td class="limit-width-900">{{commit_msg}}</td>
+        <td>
+            <a class="waves-effect waves-light btn orange" onclick="wizardcontroller.ShowStep(2,'remotes/{{cardName}}');">
+                <span>Start</span>
+            </a>
+        </td>
+    </tr>
+    {{/card}}
+</template>

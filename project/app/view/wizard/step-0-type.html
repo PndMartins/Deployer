@@ -1,0 +1,111 @@
+<template class="template">
+    <div class="row">
+        <div class="row">
+            <div class="col s6">
+                <h5 class="orange-text">{{servername}}</h5>
+            </div>
+            <div class="col s6 mrg-top-15">
+                <a class="btn-floating waves-effect waves-light orange right tooltipped" data-position="bottom" data-tooltip="Delete this configuration"  onclick="configurationcontroller.RemoveConfiguration('{{id}}');" ><i class="material-icons">delete</i></a>
+                <a class="btn-floating waves-effect waves-light orange right tooltipped mrg-right-5" data-position="left" data-tooltip="Edit this configuration" onclick="configurationcontroller.NavigateToView('{{id}}','false');"><i class="material-icons">edit</i></a>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col s3">
+            <div class="card mrg-top-10 grey darken-3">
+                <div class="card-image">
+                    <img src="app/images/1.png">
+                    <a class="btn-floating halfway-fab waves-effect waves-light orange hoverable tooltipped" data-position="top" data-tooltip="Start full deploy" onclick="wizardcontroller.ShowStep(1,1);">
+                        <i class="material-icons">forward</i>
+                    </a>
+                </div>
+                <div class="card-content choice">
+                    <span class="card-title"><b>Full</b></span>
+                    <p>This deploy passes all of the files in the git lab, from the branch that will be selected on the next step into the server.</p>
+                    <p class="note orange-text">Note: This process will delete all of the existing files in the server, after a backup is performed.</p>
+                </div>
+                <div class="card-action"></div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div class="card mrg-top-10 grey darken-3">
+                <div class="card-image">
+                    <img src="app/images/2.png">
+                    <!--
+                    <a class="btn-floating halfway-fab waves-effect waves-light orange hoverable" onclick="">
+                        <i class="material-icons">forward</i>
+                    </a>
+                    -->
+                </div>
+                <div class="card-content choice">
+                    <span class="card-title"><b>Partial</b></span>
+                    <p>Not Available at the moment</p>
+                    <!--<p>This deploy asks for two commits on a selected branch, and only passes to the server the files that were modified between the selected commits.</p>-->
+                </div>
+                <div class="card-action"></div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div class="card mrg-top-10 grey darken-3">
+                <div class="card-image">
+                    <img src="app/images/3.png">
+                </div>
+                <div class="card-content choice">
+                    <span class="card-title"><b>With build</b></span>
+                    <p>Not Available at the moment</p>
+                </div>
+                <div class="card-action"></div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div class="card mrg-top-10 grey darken-3">
+                <div class="card-image">
+                    <img src="app/images/4.png">
+                    <a class="btn-floating halfway-fab waves-effect waves-light orange hoverable tooltipped" data-position="top" data-tooltip="Start full local deploy" onclick="wizardcontroller.ShowStep(1,4);">
+                        <i class="material-icons">forward</i>
+                    </a>
+                </div>
+                <div class="card-content choice">
+                    <span class="card-title"><b>From local full</b></span>
+                    <p>This deploy asks for a local folder and sends all of the files and folders inside of it, to the server.</p>
+                    <p class="note orange-text">Note: This process will delete all of the existing files in the server, after a backup is performed.</p>
+                </div>
+                <div class="card-action"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s3">
+            <div class="card mrg-top-10 grey darken-3">
+                <div class="card-image">
+                    <img src="app/images/1.png">
+                    <a class="btn-floating halfway-fab waves-effect waves-light orange hoverable tooltipped" data-position="top" data-tooltip="Start full local deploy" onclick="wizardcontroller.ShowStep(1,6);">
+                        <i class="material-icons">forward</i>
+                    </a>
+                </div>
+                <div class="card-content choice">
+                    <span class="card-title"><b>From local partial</b></span>
+                    <p>This deploy asks for a list of folders and files and sends them to the server, to the server.</p>
+                </div>
+                <div class="card-action"></div>
+            </div>
+        </div>
+        <div class="col s3">
+            <div class="card mrg-top-10 grey darken-3">
+                <div class="card-image">
+                    <img src="app/images/2.png">
+                    <a class="btn-floating halfway-fab waves-effect waves-light orange hoverable tooltipped" data-position="top" data-tooltip="Check backups" onclick="wizardcontroller.ShowStep(1,5);">
+                        <i class="material-icons">forward</i>
+                    </a>
+                </div>
+                <div class="card-content choice">
+                    <span class="card-title"><b>Available backups</b></span>
+                    <p>This option will check if backups already exist in the server, and allows to perform a restore of one of the existing backups</p>
+                </div>
+                <div class="card-action"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row console-header-margin"></div>
+</template>

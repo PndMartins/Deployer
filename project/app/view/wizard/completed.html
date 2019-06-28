@@ -1,0 +1,27 @@
+<template class="template">
+    <ul class="collapsible report">
+        <li class="active">
+            <div class="collapsible-header report grey darken-3"><i class="material-icons">done_all</i>Completed</div>
+            <div class="collapsible-body report">
+                <ul class="collapsible report">
+                    <li>
+                        <div class="collapsible-header report grey darken-3 yellow-text">Warnings: {{warningcount}}</div>
+                        <div class="collapsible-body report">
+                            {{#warnings}}
+                            <p>{{message}}</p>
+                            {{/warnings}}
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header report grey darken-3 red-text">Errors: {{errorcount}}</div>
+                        <div class="collapsible-body report">
+                            {{#errors}}
+                            <p>{{message}}</p>
+                            {{/errors}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</template>

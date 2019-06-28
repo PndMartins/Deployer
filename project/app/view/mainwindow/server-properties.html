@@ -1,0 +1,88 @@
+<template class="template">
+    <input type="hidden" id="is_new" value="{{isnew}}" />
+    <input type="hidden" id="id_card" value="{{id}}" />
+    
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <h5 class="orange-text">Configuration</h5>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">computer</i>
+                    <input type="text" id="con_name" name="con_name" value="{{name}}" data-validate="empty" class="white-text">
+                    <label for="con_name">Name</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <h5 class="orange-text">Remote Server Connections</h5>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">dns</i>
+                    <input type="text" id="server_name" name="server_name" value="{{server}}" data-validate="empty" data-group-validation="sftp" class="white-text">
+                    <label for="server_name">Server</label>
+                </div>
+    
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">compare_arrows</i>
+                    <input type="number" id="server_port" name="server_port" value="{{port}}" data-validate="number" data-group-validation="sftp" class="white-text">
+                    <label for="server_port">Port</label>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">person</i>
+                    <input type="text" id="server_username" name="server_username" value="{{username}}" data-validate="empty" data-group-validation="sftp" class="white-text">
+                    <label for="server_username">Username</label>
+                </div>
+    
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">gesture</i>
+                    <input type="password" id="server_password" name="server_password" value="{{password}}" data-validate="empty" data-group-validation="sftp" class="white-text">
+                    <label for="server_password">Password</label>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">folder</i>
+                    <input type="text" id="server_deploy_path" name="server_deploy_path" value="{{server_deploy_path}}" data-validate="empty" data-group-validation="sftp" class="white-text">
+                    <label for="server_deploy_path">Server deploy folder</label>
+                </div>
+            </div>
+    
+            <a class="waves-effect waves-light btn orange right" onclick="if (validationcontroller.ValidateGroup('sftp',true)) { ftpcontroller.TesteConnection(); }">
+                <i class="material-icons right">done</i>Validate
+            </a>
+        </form>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <h5 class="orange-text">Git configuration</h5>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">cloud_download</i>
+                    <input type="text" id="git_clone_url" name="git_clone_url" value="{{gitUrl}}" data-validate="empty" class="white-text">
+                    <label for="git_clone_url">Server deploy folder</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <a class="waves-effect waves-light btn orange right" 
+                    onclick="if (validationcontroller.Validate(false)) { configurationcontroller.AddConfiguration(__appglobals.utils.generateUUIDIfNeeded(document.getElementById(__appglobals.form_card_id))); }">
+                        <i class="material-icons right">save_alt</i>Save
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

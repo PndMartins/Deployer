@@ -1,0 +1,15 @@
+<template class="template">
+  <div id="base-modal" class="modal">
+   <div class="modal-content grey darken-4">
+     <h4>{{title}}</h4>
+     <p>{{message}}</p>
+     {{#showNote}}
+     <span id="modal-note-element" class="note red-text">{{note}}</span>
+     {{/showNote}}
+   </div>
+   <div class="modal-footer grey darken-4">
+     <a href="#!" class="modal-close waves-effect waves-light btn brown" onclick="{{cancel_callback}}">{{cancel}}</a>
+     <a href="#!" class="modal-close waves-effect waves-light btn orange" onclick="{{confirm_callback}}; return false;">{{confirm}}</a>
+   </div>
+ </div>
+</template>

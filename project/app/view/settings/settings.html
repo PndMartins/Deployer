@@ -1,0 +1,53 @@
+<template class="template">
+    <div class="row">
+
+    </div>
+    
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="col s6"><h5>Show dev tools</h5></div>
+                <div class="col s6">
+                    <a class="waves-effect waves-light btn orange right" onclick="maincontroller.ShowDevTools();">
+                        <i class="material-icons right"></i>Show dev tools
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="divider"></div>
+
+    <div class="row">
+        <div class="input-field col s12">
+            <h5>Console log type</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s3">
+            <label>
+                <input name="console-option" type="radio" {{none}} onclick="maincontroller.UpdateDebugConsole(0);"/>
+                <span>None</span>
+            </label>
+        </div>
+        <div class="input-field col s3">
+            <label>
+                <input name="console-option" type="radio" {{devtools}} onclick="maincontroller.UpdateDebugConsole(1);"/>
+                <span>Chrome tools console</span>
+            </label>
+        </div>
+        <div class="input-field col s3">
+            <label>
+                <input name="console-option" type="radio" {{app}} onclick="maincontroller.UpdateDebugConsole(2);"/>
+                <span>App console</span>
+            </label>
+        </div>
+        <div class="input-field col s3">
+            <label>
+                <input name="console-option" type="radio" {{all}} onclick="maincontroller.UpdateDebugConsole(3);"/>
+                <span>Chrome tools and App console</span>
+            </label>
+        </div>
+    </div>
+
+</template>
