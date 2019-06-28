@@ -1,5 +1,4 @@
 Dependencies:
-- # for use from cli
 - npm install electron-packager -g
 
 Module page/instructions:
