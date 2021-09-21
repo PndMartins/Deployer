@@ -20,7 +20,7 @@
     "mustache": "^3.0.0",
     "ping": "^0.2.2",
     "simple-git": "^1.104.0",
-    "ssh2": "^0.6.1",
+    "ssh2": "^1.4.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {}
