@@ -14,7 +14,7 @@
   "author": "Pedro Martins",
   "license": "ISC",
   "dependencies": {
-    "electron": "^3.0.9",
+    "electron": "^11.5.0",
     "electron-store": "^2.0.0",
     "fs-extra": "^7.0.1",
     "mustache": "^3.0.0",
